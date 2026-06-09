@@ -298,26 +298,49 @@ flex-wrap:wrap;
 }
 
 .detail-box{
-background:rgba(255,255,255,.22);
+background:
+rgba(255,255,255,.12);
+
 backdrop-filter:blur(20px);
-padding:30px;
-border-radius:30px;
-min-width:250px;
-border:1px solid rgba(255,255,255,.2);
+
+padding:28px 25px;
+
+border-radius:28px;
+
+width:300px;
+height:150px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+border:1px solid
+rgba(255,255,255,.15);
+
+box-shadow:
+0 10px 30px
+rgba(0,0,0,.10);
+
+transition:.35s;
 }
+ .detail-box:hover{
+transform:translateY(-6px);
+} 
 
 .detail-box h3{
-font-size:26px;
-margin-bottom:10px;
+font-size:28px;
+margin-bottom:12px;
 color:#fff;
+font-weight:700;
 }
 
 .detail-box p{
 font-size:22px;
-font-weight:600;
+font-weight:500;
 color:#fff;
+line-height:1.5;
 }
-
 @media(max-width:900px){
 
 .ceremony-image img{
