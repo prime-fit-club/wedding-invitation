@@ -126,7 +126,66 @@ color:#8b735d;
 font-size:24px;
 font-weight:600;
 }
+/* COUNTDOWN */
 
+.countdown-section{
+padding:120px 20px;
+text-align:center;
+background:#fffaf5;
+}
+
+.countdown-section h2{
+font-family:'Cormorant Garamond',serif;
+font-size:70px;
+margin-bottom:50px;
+color:#4c3d30;
+}
+
+.countdown-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.count-box{
+background:white;
+width:180px;
+padding:35px 20px;
+border-radius:30px;
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.count-box span{
+font-size:56px;
+font-weight:700;
+display:block;
+margin-bottom:10px;
+color:#8b735d;
+}
+
+.count-box p{
+font-size:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.countdown-section h2{
+font-size:46px;
+}
+
+.count-box{
+width:150px;
+padding:25px 15px;
+}
+
+.count-box span{
+font-size:40px;
+}
+
+}
 /* MOBILE */
 
 @media(max-width:900px){
@@ -213,6 +272,82 @@ max-width:320px;
 </div>
 
 </section>
+<section class="countdown-section">
 
+<h2>
+Մնացել է
+</h2>
+
+<div class="countdown-container">
+
+<div class="count-box">
+<span id="days">0</span>
+<p>Օր</p>
+</div>
+
+<div class="count-box">
+<span id="hours">0</span>
+<p>Ժամ</p>
+</div>
+
+<div class="count-box">
+<span id="minutes">0</span>
+<p>Րոպե</p>
+</div>
+
+<div class="count-box">
+<span id="seconds">0</span>
+<p>Վայրկյան</p>
+</div>
+
+</div>
+
+</section>
+  <script>
+
+const weddingDate =
+new Date("July 07, 2027 18:00:00").getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+
+const distance =
+weddingDate - now;
+
+const days =
+Math.floor(distance /
+(1000 * 60 * 60 * 24));
+
+const hours =
+Math.floor((distance %
+(1000 * 60 * 60 * 24))
+/ (1000 * 60 * 60));
+
+const minutes =
+Math.floor((distance %
+(1000 * 60 * 60))
+/ (1000 * 60));
+
+const seconds =
+Math.floor((distance %
+(1000 * 60))
+/ 1000);
+
+document.getElementById('days')
+.innerHTML = days;
+
+document.getElementById('hours')
+.innerHTML = hours;
+
+document.getElementById('minutes')
+.innerHTML = minutes;
+
+document.getElementById('seconds')
+.innerHTML = seconds;
+
+},1000);
+
+</script>
 </body>
 </html>
