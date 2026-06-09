@@ -231,6 +231,72 @@ font-family:
 'Cormorant Garamond',
 serif;
 }
+  .wedding-ceremony{
+padding:120px 8%;
+background:#f8f4ef;
+}
+
+.ceremony-image{
+position:relative;
+max-width:1200px;
+margin:auto;
+border-radius:40px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+
+.ceremony-image img{
+width:100%;
+display:block;
+}
+
+.ceremony-info{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.ceremony-info h2{
+font-size:52px;
+margin-bottom:30px;
+color:#5b4636;
+font-family:'Cormorant Garamond', serif;
+}
+
+.ceremony-details{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.detail-box{
+background:white;
+padding:25px;
+border-radius:25px;
+min-width:240px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.detail-box h3{
+font-size:24px;
+margin-bottom:12px;
+color:#8d7762;
+}
+
+.detail-box p{
+font-size:22px;
+font-weight:600;
+color:#4d3d31;
+}
 /* MOBILE */
 
 @media(max-width:900px){
@@ -337,6 +403,38 @@ max-width:320px;
 <p>Վայրկյան</p>
 </div>
 
+</div>
+
+</section>
+  <section class="wedding-ceremony">
+
+<div class="ceremony-image">
+
+<img src="images/wedding-photo.png" alt="Վահե և Քրիստինե">
+
+<div class="ceremony-info">
+
+<h2>Մեր Պսակադրությունը</h2>
+
+<div class="ceremony-details">
+
+<div class="detail-box">
+<h3>Եկեղեցի</h3>
+<p>Մայր Աթոռ Սուրբ Էջմիածին</p>
+</div>
+
+<div class="detail-box">
+<h3>Ժամ</h3>
+<p>14:00</p>
+</div>
+
+<div class="detail-box">
+<h3>Ամսաթիվ</h3>
+<p>07.07.2027</p>
+</div>
+
+</div>
+</div>
 </div>
 
 </section>
