@@ -243,6 +243,7 @@ margin:auto;
 border-radius:45px;
 overflow:hidden;
 box-shadow:0 25px 70px rgba(0,0,0,.15);
+min-height:850px;
 }
 
 .ceremony-image img{
@@ -255,18 +256,17 @@ filter:brightness(.85);
 
 .ceremony-info{
 position:absolute;
-bottom:35px;
+bottom:40px;
 left:50%;
 transform:translateX(-50%);
-width:88%;
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.35);
+width:85%;
+background:rgba(255,255,255,.22);
+backdrop-filter:blur(20px);
 padding:35px;
 border-radius:35px;
 text-align:center;
+z-index:5;
 }
-
 .ceremony-info h2{
 font-size:64px;
 color:white;
@@ -321,7 +321,14 @@ font-size:42px;
 
 .detail-box{
 min-width:100%;
-padding:20px;
+padding:18px;
+}
+
+.ceremony-info{
+position:absolute;
+bottom:15px;
+width:92%;
+padding:18px;
 }
 }
 /* MOBILE */
